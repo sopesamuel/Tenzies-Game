@@ -6,9 +6,16 @@ import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
 
 export default function App() {
-
+  const [darkMode, setDarkMode] = React.useState(true);
   const [dice, setDice] = React.useState(randomNumber());
-  const [tenzies, setTenzies] = React.useState(false)
+  const [tenzies, setTenzies] = React.useState(false);
+
+  const view = {backgroundColor: darkMode ? "#A0C2E5" : "white" }
+  const btnView = {backgroundColor: darkMode ? "white" : "#A0C2E5" }
+
+  function changeView(){
+    setDarkMode( prevMode => !prevMode)
+  }
 
   React.useEffect(() => {
       const diceHeld = dice.every(die => die.isHeld)
@@ -61,8 +68,11 @@ export default function App() {
   
 
   return (
-    <main>
+    
+    <main style={view}>
+    <button className="dark-btn" style={btnView} onClick={changeView}></button>
     {tenzies && <Confetti />}
+    
     <h1 className="title">Tenzies</h1>
     <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
     <div className="die-component" >

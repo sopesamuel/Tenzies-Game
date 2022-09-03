@@ -10,7 +10,7 @@ main{
  
   width: 820px;
   height: 620px;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   margin-left: auto;
   margin-right: auto;
  margin-top: 100px;
@@ -68,4 +68,17 @@ font-size: 25px;
   margin-top: 20px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.dark-btn{
+  margin-top: -100px;
+  margin-bottom: 50px;
+  margin-left: 700px;
+  border:  #0b2435 3px solid;
+  background-color: darkblue;
+  background-image:url("/Users/mac/Documents/Tenzies Game/my-app/public/lightbulb (2).png") ;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
