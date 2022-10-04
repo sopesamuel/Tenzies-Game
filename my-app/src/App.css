@@ -82,3 +82,40 @@ font-size: 25px;
   width: 30px;
   cursor: pointer;
 }
+
+@media(max-width: 415px){
+  main{
+    /* position: absolute; */
+   
+    width: 100%;
+    height: 100%;
+    /* background-color: #FFFFFF; */
+    margin-left: auto;
+    margin-right: auto;
+   margin-top: 100px;
+   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+  }
+
+  .die-component{
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 30px;
+    width: auto;
+  }
+  .dark-btn{
+    margin-top: -100px;
+    margin-bottom: 50px;
+    margin-left: 400px;
+    border:  #0b2435 3px solid;
+    background-color: darkblue;
+    background-image:url("/Users/mac/Documents/Tenzies Game/my-app/public/lightbulb (2).png") ;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+}
